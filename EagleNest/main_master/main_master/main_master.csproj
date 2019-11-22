@@ -74,14 +74,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Blog\Followers.aspx" />
-    <Content Include="Blog\Following.aspx" />
     <Content Include="Blog\Main.aspx" />
     <Content Include="Blog\Post.aspx" />
+    <Content Include="Blog\PostNotFound.aspx" />
     <Content Include="Blog\User.aspx" />
+    <Content Include="Blog\UserNotFound.aspx" />
     <Content Include="Blog\View.aspx" />
+    <Content Include="Board\new_post.aspx" />
+    <Content Include="css\Gallery_Post_Form.css" />
     <Content Include="css\style5.css" />
     <Content Include="Board\Main.aspx" />
+    <Content Include="Gallery\Archive.aspx" />
+    <Content Include="Gallery\Post_Form.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\1.jpg" />
     <Content Include="images\2.jpg" />
@@ -104,6 +108,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Main.aspx" />
+    <Content Include="Profile.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="sql\droptables.sql" />
     <Content Include="sql\database_build_query.sql" />
@@ -116,6 +121,44 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Blog\BlogPost.cs" />
+    <Compile Include="Blog\Comment.cs" />
+    <Compile Include="Blog\PostNotFound.aspx.cs">
+      <DependentUpon>PostNotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\PostNotFound.aspx.designer.cs">
+      <DependentUpon>PostNotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\UserNotFound.aspx.cs">
+      <DependentUpon>UserNotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog\UserNotFound.aspx.designer.cs">
+      <DependentUpon>UserNotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog\UserProfile.cs" />
+    <Compile Include="Board\new_post.aspx.cs">
+      <DependentUpon>new_post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Board\new_post.aspx.designer.cs">
+      <DependentUpon>new_post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery\Archive.aspx.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery\Archive.aspx.designer.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery\Post_Form.aspx.cs">
+      <DependentUpon>Post_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery\Post_Form.aspx.designer.cs">
+      <DependentUpon>Post_Form.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -140,6 +183,13 @@
     <Compile Include="Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -162,20 +212,6 @@
     </Compile>
     <Compile Include="Blog\BlogMaster.Master.designer.cs">
       <DependentUpon>BlogMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Blog\Followers.aspx.cs">
-      <DependentUpon>Followers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Blog\Followers.aspx.designer.cs">
-      <DependentUpon>Followers.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Blog\Following.aspx.cs">
-      <DependentUpon>Following.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Blog\Following.aspx.designer.cs">
-      <DependentUpon>Following.aspx</DependentUpon>
     </Compile>
     <Compile Include="Blog\Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
